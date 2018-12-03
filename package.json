@@ -1,0 +1,30 @@
+{
+  "name": "snake-game",
+  "version": "0.0.1",
+  "description": "Snake Game",
+  "scripts": {
+    "test": "jest",
+    "start": "live-server --mount=/:./src --watch=./src --port=5000"
+  },
+  "devDependencies": {
+    "babel-core": "~6.26.3",
+    "babel-jest": "~22.4.4",
+    "babel-preset-env": "~1.7.0",
+    "jest": "~23.4.1",
+    "live-server": "~1.2.0"
+  },
+  "jest": {
+    "testURL": "http://localhost/",
+    "testMatch": ["**/*.test.js"],
+    "moduleDirectories": ["node_modules", "<rootDir>/src", "<rootDir>/tests"],
+    "moduleFileExtensions": ["js"],
+    "roots": ["<rootDir>/tests"]
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": ["env"]
+      }
+    }
+  }
+}

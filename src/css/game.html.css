@@ -1,0 +1,136 @@
+/* Fill this in with the styles needed for your renderer. */
+body {
+  position: relative;
+  margin: 24px;
+}
+
+#snake-game {
+  position: relative;
+  display: inline-flex;
+  font-family: "Courier New";
+  font-size: 12px;
+  width: auto;
+  height: auto;
+  color: black;
+  background-color: #eee;
+}
+
+#snake-game.gameover:after {
+  content: "GAME OVER";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+#snake-game.paused:after {
+  content: "PAUSED";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* background: rgba(255, 255, 255, 0.75); */
+}
+
+#snake-game .tile {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+}
+
+#snake-game .tile.wall {
+  border: none;
+}
+
+#snake-game .tile.top-left.wall:after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-top: 8px solid #000000;
+  border-left: 8px solid #000000;
+  margin-top: 8px;
+  margin-left: 8px;
+}
+
+#snake-game .tile.top-right.wall:after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-top: 8px solid #000000;
+  border-right: 8px solid #000000;
+  margin-top: 8px;
+  margin-right: 8px;
+}
+
+#snake-game .tile.bottom-right.wall:after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-bottom: 8px solid #000000;
+  border-right: 8px solid #000000;
+  margin-bottom: 8px;
+  margin-right: 8px;
+}
+
+#snake-game .tile.bottom-left.wall:after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-bottom: 8px solid #000000;
+  border-left: 8px solid #000000;
+  margin-bottom: 8px;
+  margin-left: 8px;
+}
+
+#snake-game .tile.vertical.wall:after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 24px;
+  border-top: none;
+  border-left: 8px solid #000000;
+  margin-left: 8px;
+}
+
+#snake-game .tile.horizontal.wall:after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 8px;
+  border-left: none;
+  border-top: 8px solid #000000;
+  margin-top: 8px;
+}
+
+#snake-game .tile.snake {
+  border: 1px solid #ebebeb;
+  width: 23px;
+  height: 23px;
+  background-color: #0009ff;
+}
+
+#snake-game .tile.fruit {
+  border: 1px solid #ebebeb;
+  width: 23px;
+  height: 23px;
+  background-color: #ff0000;
+}
